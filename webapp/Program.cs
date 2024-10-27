@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using webapp.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Add in memory database
+builder.Services.AddDbContext<CustomerDbContext>(options => options.UseInMemoryDatabase("RazorDemo"));
 
 var app = builder.Build();
 
