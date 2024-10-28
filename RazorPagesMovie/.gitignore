@@ -52,5 +52,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # SQLite database
-/RazorPagesMovieContext-*.db
-/RazorPagesMovieContext-*.db*
+/RazorPagesMovie.Data.db*
