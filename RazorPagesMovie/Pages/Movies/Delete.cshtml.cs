@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages_Movies
+namespace RazorPagesMovie.Pages.Movies
 {
     public class DeleteModel : PageModel
     {
@@ -30,7 +30,7 @@ namespace RazorPagesMovie.Pages_Movies
             }
 
             var movie = await _context.Movie.FirstOrDefaultAsync(m => m.Id == id);
-
+            
             if (movie == null)
             {
                 return NotFound();
