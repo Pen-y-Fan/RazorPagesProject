@@ -6,16 +6,28 @@ tutorial [Get started with Razor Pages in ASP.NET Core](https://learn.microsoft.
 ## Prerequisites
 
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- 
 - Rider, VS Code or Visual Studio
 
 ## Installation
 
-Once downloaded open Rider and start the project.
-
-Or from the command line
+From the command line build the project
 
 ```shell
 dotnet dev-certs https --trust
 dotnet build
+```
+
+Migrate the database using the command-line interface (CLI) tools for EF Core
+
+```shell
+dotnet tool uninstall --global dotnet-ef
+dotnet tool install --global dotnet-ef
+dotnet ef database update
+```
+
+Run the project
+
+```shell
 dotnet watch run
 ```
